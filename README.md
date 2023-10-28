@@ -6,6 +6,8 @@ Extend your windows' drag area from title bar to the whole window.
 
 ## Usage
 
+#### this is a mac app doesn't work on windows
+
 Hold `Control` + `Command` and use your mouse to drag anywhere in a window to move it.
 
 ## Installation

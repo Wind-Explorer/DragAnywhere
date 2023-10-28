@@ -11,6 +11,10 @@
 		A224EE212AEBF6C000894B90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A224EE202AEBF6C000894B90 /* ContentView.swift */; };
 		A224EE232AEBF6C100894B90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A224EE222AEBF6C100894B90 /* Assets.xcassets */; };
 		A224EE262AEBF6C100894B90 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A224EE252AEBF6C100894B90 /* Preview Assets.xcassets */; };
+		A224EE2F2AEBFC5300894B90 /* Magic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A224EE2E2AEBFC5300894B90 /* Magic.swift */; };
+		A224EE312AEBFC6700894B90 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A224EE302AEBFC6700894B90 /* Shell.swift */; };
+		A27C84222AECB2D400D545A1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A27C84212AECB2D400D545A1 /* Info.plist */; };
+		A2C103F12AEC0E890073DD96 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = A2C103F02AEC0E890073DD96 /* AlertToast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,9 @@
 		A224EE222AEBF6C100894B90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A224EE252AEBF6C100894B90 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A224EE272AEBF6C100894B90 /* DragAnywhere.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DragAnywhere.entitlements; sourceTree = "<group>"; };
+		A224EE2E2AEBFC5300894B90 /* Magic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic.swift; sourceTree = "<group>"; };
+		A224EE302AEBFC6700894B90 /* Shell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
+		A27C84212AECB2D400D545A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2C103F12AEC0E890073DD96 /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,10 +61,13 @@
 			isa = PBXGroup;
 			children = (
 				A224EE1E2AEBF6C000894B90 /* DragAnywhereApp.swift */,
+				A224EE2E2AEBFC5300894B90 /* Magic.swift */,
+				A224EE302AEBFC6700894B90 /* Shell.swift */,
 				A224EE202AEBF6C000894B90 /* ContentView.swift */,
 				A224EE222AEBF6C100894B90 /* Assets.xcassets */,
 				A224EE272AEBF6C100894B90 /* DragAnywhere.entitlements */,
 				A224EE242AEBF6C100894B90 /* Preview Content */,
+				A27C84212AECB2D400D545A1 /* Info.plist */,
 			);
 			path = DragAnywhere;
 			sourceTree = "<group>";
@@ -85,6 +96,9 @@
 			dependencies = (
 			);
 			name = DragAnywhere;
+			packageProductDependencies = (
+				A2C103F02AEC0E890073DD96 /* AlertToast */,
+			);
 			productName = DragAnywhere;
 			productReference = A224EE1B2AEBF6C000894B90 /* DragAnywhere.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +127,9 @@
 				Base,
 			);
 			mainGroup = A224EE122AEBF6C000894B90;
+			packageReferences = (
+				A2C103EF2AEC0E890073DD96 /* XCRemoteSwiftPackageReference "AlertToast" */,
+			);
 			productRefGroup = A224EE1C2AEBF6C000894B90 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +146,7 @@
 			files = (
 				A224EE262AEBF6C100894B90 /* Preview Assets.xcassets in Resources */,
 				A224EE232AEBF6C100894B90 /* Assets.xcassets in Resources */,
+				A27C84222AECB2D400D545A1 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +158,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A224EE212AEBF6C000894B90 /* ContentView.swift in Sources */,
+				A224EE2F2AEBFC5300894B90 /* Magic.swift in Sources */,
+				A224EE312AEBFC6700894B90 /* Shell.swift in Sources */,
 				A224EE1F2AEBF6C000894B90 /* DragAnywhereApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,7 +290,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = DragAnywhere/DragAnywhere.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -279,7 +301,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_FILE = DragAnywhere/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DragAnywhere;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "©️ 2023 Adam C. All rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -297,7 +322,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = DragAnywhere/DragAnywhere.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -306,7 +333,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_FILE = DragAnywhere/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DragAnywhere;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "©️ 2023 Adam C. All rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -341,6 +371,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A2C103EF2AEC0E890073DD96 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A2C103F02AEC0E890073DD96 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2C103EF2AEC0E890073DD96 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A224EE132AEBF6C000894B90 /* Project object */;
 }
